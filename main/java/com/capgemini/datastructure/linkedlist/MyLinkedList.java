@@ -15,9 +15,8 @@ public class MyLinkedList {
 	if(this.head == null)
 		this.head = newNode;
 	else {
-		INode tempNode = this.head;
-		this.head = newNode;
-		this.head.setNext(tempNode);
+		this.tail.setNext(newNode);
+		this.tail = newNode;
 	}
 	}
 	public void printMyNodes() {
