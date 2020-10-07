@@ -58,9 +58,9 @@ public class LinkedListTest {
 		myLinkedList.add(myFirstNode);
 		myLinkedList.add(mySecondNode);
 		myLinkedList.add(myThirdNode);
-		myLinkedList.printMyNodes();
 		MyNode<Integer> pop = (MyNode<Integer>) myLinkedList.pop();
 		assertEquals(mySecondNode, pop);
+		myLinkedList.printMyNodes();
 	}
 	
 
