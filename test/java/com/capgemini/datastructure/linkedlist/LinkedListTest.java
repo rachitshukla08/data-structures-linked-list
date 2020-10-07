@@ -56,11 +56,25 @@ public class LinkedListTest {
 		MyNode<Integer> myThirdNode = new MyNode<Integer>(70);
 		MyLinkedList myLinkedList = new MyLinkedList();
 		myLinkedList.add(myFirstNode);
-		myLinkedList.add(mySecondNode);
-		myLinkedList.add(myThirdNode);
+		myLinkedList.append(mySecondNode);
+		myLinkedList.append(myThirdNode);
 		MyNode<Integer> pop = (MyNode<Integer>) myLinkedList.pop();
-		assertEquals(mySecondNode, pop);
 		myLinkedList.printMyNodes();
+		assertEquals(myFirstNode, pop);
+	}
+	
+	@Test
+	public void given3Numbers_WhenPopLast_ShouldRemoveLastNumber() {
+		MyNode<Integer> myFirstNode = new MyNode<Integer>(56);
+		MyNode<Integer> mySecondNode = new MyNode<Integer>(30);
+		MyNode<Integer> myThirdNode = new MyNode<Integer>(70);
+		MyLinkedList myLinkedList = new MyLinkedList();
+		myLinkedList.add(myFirstNode);
+		myLinkedList.append(mySecondNode);
+		myLinkedList.append(myThirdNode);
+		MyNode<Integer> popLast = (MyNode<Integer>) myLinkedList.popLast();
+		myLinkedList.printMyNodes();
+		assertEquals(myThirdNode, popLast);
 	}
 	
 
