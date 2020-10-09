@@ -56,10 +56,14 @@ public class MyLinkedList<K> {
 	}
 	
 	public INode pop() {
-		INode tempNode = this.head;
-		this.head = head.getNext();
-		size--;
-		return tempNode;
+		if(size>0)	{
+			INode tempNode = this.head;
+			this.head = head.getNext();
+			size--;
+			return tempNode;
+		}
+		else 
+			return null;
 	}
 	
 	public INode popLast() {
