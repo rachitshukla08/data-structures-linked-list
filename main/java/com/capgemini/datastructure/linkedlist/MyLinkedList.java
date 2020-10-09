@@ -118,4 +118,6 @@ public class MyLinkedList<K> {
 	public int size() {
 		return size;
 	}
+	
+	
 }
